@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @patent %>
+
+<div>
+  <%= link_to "Edit this patent", edit_patent_path(@patent) %> |
+  <%= link_to "Back to patents", patents_path %>
+
+  <%= button_to "Destroy this patent", @patent, method: :delete %>
+</div>

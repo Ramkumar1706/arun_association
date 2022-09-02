@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Nbas</h1>
+
+<div id="nbas">
+  <% @nbas.each do |nba| %>
+    <%= render nba %>
+    <p>
+      <%= link_to "Show this nba", nba %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New nba", new_nba_path %>

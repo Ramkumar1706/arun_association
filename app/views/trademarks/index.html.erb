@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Trademarks</h1>
+
+<div id="trademarks">
+  <% @trademarks.each do |trademark| %>
+    <%= render trademark %>
+    <p>
+      <%= link_to "Show this trademark", trademark %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New trademark", new_trademark_path %>

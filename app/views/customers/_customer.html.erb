@@ -1,0 +1,47 @@
+<div id="<%= dom_id customer %>">
+  <p>
+    <strong>AS Userid:</strong>
+    <%= customer.asuserid %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= customer.name %>
+  </p>
+
+  <p>
+    <strong>Address line 1:</strong>
+    <%= customer.address_line_1 %>
+  </p>
+
+  <p>
+    <strong>Address line 2:</strong>
+    <%= customer.address_line_2 %>
+  </p>
+
+  <p>
+    <strong>City:</strong>
+    <%= customer.city %>
+  </p>
+
+  <p>
+    <strong>State:</strong>
+    <%= customer.state %>
+  </p>
+
+  <p>
+    <strong>Country:</strong>
+    <%= customer.country %>
+  </p>
+
+  <p>
+    <strong>Telephone:</strong>
+    <%= customer.telephone %>
+  </p>
+
+  <p>
+    <strong>Type:</strong>
+    <%= customer.customer_type.try(:titleize) %>
+  </p>
+
+</div>

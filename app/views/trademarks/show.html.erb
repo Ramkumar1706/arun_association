@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @trademark %>
+
+<div>
+  <%= link_to "Edit this trademark", edit_trademark_path(@trademark) %> |
+  <%= link_to "Back to trademarks", trademarks_path %>
+
+  <%= button_to "Destroy this trademark", @trademark, method: :delete %>
+</div>

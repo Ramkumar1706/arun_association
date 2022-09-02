@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @nba %>
+
+<div>
+  <%= link_to "Edit this nba", edit_nba_path(@nba) %> |
+  <%= link_to "Back to nbas", nbas_path %>
+
+  <%= button_to "Destroy this nba", @nba, method: :delete %>
+</div>

@@ -1,0 +1,62 @@
+<%= form_with(model: trademark) do |form| %>
+  <% if trademark.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(trademark.errors.count, "error") %> prohibited this trademark from being saved:</h2>
+
+      <ul>
+        <% trademark.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :customer_id, style: "display: block" %>
+    <%= form.select :customer_id, options_from_collection_for_select(Customer.ids_and_names_hash, :first, :last) %>
+  </div>
+
+  <div>
+    <%= form.label :priority_at, style: "display: block" %>
+    <%= form.datetime_field :priority_at %>
+  </div>
+
+  <div>
+    <%= form.label :priority_number, style: "display: block" %>
+    <%= form.text_field :priority_number %>
+  </div>
+
+  <div>
+    <%= form.label :indian_application_number, style: "display: block" %>
+    <%= form.text_field :indian_application_number %>
+  </div>
+
+  <div>
+    <%= form.label :filed_at, style: "display: block" %>
+    <%= form.datetime_field :filed_at %>
+  </div>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :deadline_option, style: "display: block" %>
+    <%= form.select :deadline_option, options_for_select(["item_one", "item_two", "item_three"]) %>
+  </div>
+
+  <div>
+    <%= form.label :deadline, style: "display: block" %>
+    <%= form.text_field :deadline %>
+  </div>
+
+  <div>
+    <%= form.label :compiled_at, style: "display: block" %>
+    <%= form.datetime_field :compiled_at %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
