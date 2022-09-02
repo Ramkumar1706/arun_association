@@ -2,7 +2,7 @@
 #
 # Table name: customers
 #
-#  id             :integer          not null, primary key
+#  id             :bigint           not null, primary key
 #  address_line_1 :string
 #  address_line_2 :string
 #  asuserid       :string

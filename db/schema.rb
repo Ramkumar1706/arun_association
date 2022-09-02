@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_09_02_064613) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "address_line_1"
@@ -26,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_064613) do
   end
 
   create_table "designs", force: :cascade do |t|
-    t.integer "customer_id", null: false
+    t.bigint "customer_id", null: false
     t.datetime "priority_at", precision: nil
     t.string "priority_number"
     t.string "indian_application_number"
@@ -41,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_064613) do
   end
 
   create_table "nbas", force: :cascade do |t|
-    t.integer "customer_id", null: false
+    t.bigint "customer_id", null: false
     t.string "nba_number"
     t.datetime "abs_at", precision: nil
     t.string "indian_application_number"
@@ -56,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_064613) do
   end
 
   create_table "patents", force: :cascade do |t|
-    t.integer "customer_id", null: false
+    t.bigint "customer_id", null: false
     t.datetime "priority_at", precision: nil
     t.string "priority_number"
     t.string "indian_application_number"
@@ -71,7 +74,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_064613) do
   end
 
   create_table "trademarks", force: :cascade do |t|
-    t.integer "customer_id", null: false
+    t.bigint "customer_id", null: false
     t.datetime "priority_at", precision: nil
     t.string "priority_number"
     t.string "indian_application_number"

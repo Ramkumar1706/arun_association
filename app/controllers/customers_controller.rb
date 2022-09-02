@@ -62,9 +62,8 @@ class CustomersController < ApplicationController
     def set_customer
       @customer = Customer.find(params[:id])
     end
-
-    # Only allow a list of trusted parameters through.
-    def customer_params
+     # Only allow a list of trusted parameters through.
+     def customer_params
       params.require(:customer).permit(:name, :address_line_1, :address_line_2, :city, :state, :country, :telephone, :customer_type, :asuserid)
     end
 end

@@ -2,7 +2,7 @@
 #
 # Table name: designs
 #
-#  id                        :integer          not null, primary key
+#  id                        :bigint           not null, primary key
 #  compiled_at               :datetime
 #  deadline                  :string
 #  deadline_option           :integer
@@ -13,7 +13,7 @@
 #  title                     :string
 #  created_at                :datetime         not null
 #  updated_at                :datetime         not null
-#  customer_id               :integer          not null
+#  customer_id               :bigint           not null
 #
 # Indexes
 #
@@ -21,7 +21,7 @@
 #
 # Foreign Keys
 #
-#  customer_id  (customer_id => customers.id)
+#  fk_rails_...  (customer_id => customers.id)
 #
 class Design < ApplicationRecord
   belongs_to :customer

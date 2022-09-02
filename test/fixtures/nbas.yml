@@ -2,7 +2,7 @@
 #
 # Table name: nbas
 #
-#  id                        :integer          not null, primary key
+#  id                        :bigint           not null, primary key
 #  abs_at                    :datetime
 #  compiled_at               :datetime
 #  deadline                  :string
@@ -13,7 +13,7 @@
 #  title                     :string
 #  created_at                :datetime         not null
 #  updated_at                :datetime         not null
-#  customer_id               :integer          not null
+#  customer_id               :bigint           not null
 #
 # Indexes
 #
@@ -21,7 +21,7 @@
 #
 # Foreign Keys
 #
-#  customer_id  (customer_id => customers.id)
+#  fk_rails_...  (customer_id => customers.id)
 #
 
 one:
